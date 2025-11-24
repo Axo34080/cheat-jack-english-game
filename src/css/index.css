@@ -1,0 +1,207 @@
+.subtitle {
+    text-align: center;
+    color: #00d4ff;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Sections de connexion */
+.login-section {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00d4ff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.login-section:hover {
+    border-color: #00ff41;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.player-section {
+    border-color: #00ff41;
+}
+
+.player-section:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
+}
+
+.dealer-section {
+    border-color: #ffd700;
+}
+
+.dealer-section:hover {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+}
+
+.login-section h2 {
+    color: #00d4ff;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.player-section h2 {
+    color: #00ff41;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.dealer-section h2 {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Groupe d'input */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #00d4ff;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00d4ff;
+    border-radius: 6px;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #00ff41;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+.input-group input::placeholder {
+    color: #666;
+}
+
+/* Boutons de connexion */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0080ff 100%);
+    border: 2px solid #00d4ff;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.player-btn {
+    background: linear-gradient(135deg, #00ff41 0%, #00cc33 100%);
+    border-color: #00ff41;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+.player-btn:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.6);
+}
+
+.dealer-btn {
+    background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+    border-color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    color: #000;
+}
+
+.dealer-btn:hover {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+}
+
+/* Séparateur */
+.separator {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #00d4ff, transparent);
+}
+
+.separator::before {
+    left: 0;
+}
+
+.separator::after {
+    right: 0;
+}
+
+.separator span {
+    background: #000;
+    color: #00d4ff;
+    padding: 0 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+/* Message d'erreur */
+.error-message {
+    background: rgba(255, 0, 64, 0.1);
+    border: 2px solid #ff0040;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    color: #ff0040;
+    text-align: center;
+    font-weight: bold;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-section {
+        padding: 20px;
+    }
+    
+    .login-section h2 {
+        font-size: 1.3em;
+    }
+    
+    .login-btn {
+        font-size: 1em;
+        padding: 12px;
+    }
+}

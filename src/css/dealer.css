@@ -1,0 +1,261 @@
+/* Infos de la partie */
+.game-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: rgba(0, 212, 255, 0.05);
+    border: 2px solid #00d4ff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: inset 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.info-card h3 {
+    color: #00d4ff;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.big-number {
+    font-size: 3em;
+    color: #ffd700;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 0 0 20px #ffd700;
+}
+
+.small-text {
+    color: #00ff41;
+    font-size: 0.9em;
+}
+
+.status {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Actions du croupier */
+.dealer-actions {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00ff41;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.dealer-actions h2 {
+    color: #ffd700;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0080ff 100%);
+    border: 2px solid #00d4ff;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.action-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+}
+
+.action-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.action-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #666 0%, #444 100%);
+    border-color: #666;
+}
+
+.start-btn {
+    background: linear-gradient(135deg, #00ff41 0%, #00cc33 100%);
+    border-color: #00ff41;
+    font-size: 1.2em;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+.start-btn:hover:not(:disabled) {
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.7);
+}
+
+.danger-btn {
+    background: linear-gradient(135deg, #ff0040 0%, #cc0033 100%);
+    border-color: #ff0040;
+    box-shadow: 0 0 15px rgba(255, 0, 64, 0.3);
+}
+
+.danger-btn:hover:not(:disabled) {
+    box-shadow: 0 0 25px rgba(255, 0, 64, 0.6);
+}
+
+/* Liste des joueurs */
+.players-section {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.players-section h2 {
+    color: #ffd700;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+.players-list {
+    display: grid;
+    gap: 12px;
+}
+
+.player-card {
+    background: rgba(0, 212, 255, 0.05);
+    border: 2px solid #00d4ff;
+    border-left: 4px solid #00ff41;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateX(5px);
+    border-left-color: #ffd700;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.player-card.help-used {
+    border-left-color: #ff0040;
+    opacity: 0.7;
+}
+
+.player-name {
+    font-size: 1.1em;
+    color: #00ff41;
+    font-weight: bold;
+}
+
+.player-stats {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85em;
+    color: #00d4ff;
+}
+
+.no-players {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Logs d'activité */
+.logs-section {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.logs-section h2 {
+    color: #00d4ff;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.logs-container {
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.85em;
+}
+
+.log-entry {
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    background: rgba(0, 212, 255, 0.05);
+    border-left: 3px solid #00d4ff;
+    border-radius: 4px;
+    color: #00d4ff;
+}
+
+.log-entry.success {
+    border-left-color: #00ff41;
+    color: #00ff41;
+}
+
+.log-entry.error {
+    border-left-color: #ff0040;
+    color: #ff0040;
+}
+
+.log-entry.warning {
+    border-left-color: #ffd700;
+    color: #ffd700;
+}
+
+/* Scrollbar personnalisée */
+.logs-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.logs-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.logs-container::-webkit-scrollbar-thumb {
+    background: #00d4ff;
+    border-radius: 4px;
+}
+
+.logs-container::-webkit-scrollbar-thumb:hover {
+    background: #00ff41;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .game-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .big-number {
+        font-size: 2.5em;
+    }
+    
+    .action-btn {
+        font-size: 0.95em;
+        padding: 12px;
+    }
+    
+    .player-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Jack - Connexion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎰 Cheat Jack</h1>
+        <p class="subtitle">Système d'aide stratégique</p>
+        
+        <!-- Connexion Joueur -->
+        <div class="login-section player-section">
+            <h2>👤 Connexion Joueur</h2>
+            <div class="input-group">
+                <label for="playerName">Votre nom :</label>
+                <input type="text" id="playerName" placeholder="Entrez votre nom" maxlength="20">
+            </div>
+            <button id="playerLoginBtn" class="login-btn player-btn">
+                🎮 Jouer
+            </button>
+        </div>
+
+        <!-- Séparateur -->
+        <div class="separator">
+            <span>OU</span>
+        </div>
+
+        <!-- Connexion Croupier -->
+        <div class="login-section dealer-section">
+            <h2>👔 Connexion Croupier</h2>
+            <div class="input-group">
+                <label for="dealerPassword">Mot de passe :</label>
+                <input type="password" id="dealerPassword" placeholder="Mot de passe croupier">
+            </div>
+            <button id="dealerLoginBtn" class="login-btn dealer-btn">
+                🎩 Interface Croupier
+            </button>
+        </div>
+
+        <!-- Message d'erreur -->
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
