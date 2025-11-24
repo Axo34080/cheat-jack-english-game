@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Jack - Croupier</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dealer.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎰 Interface Croupier</h1>
+        
+        <!-- Infos de la partie actuelle -->
+        <div class="game-info">
+            <div class="info-card">
+                <h3>Manche actuelle</h3>
+                <p class="big-number" id="currentRound">-</p>
+                <p class="small-text">/ <span id="maxRounds">5</span> manches</p>
+            </div>
+            <div class="info-card">
+                <h3>Statut partie</h3>
+                <p class="status" id="gameStatus">❌ Inactive</p>
+            </div>
+            <div class="info-card">
+                <h3>Joker</h3>
+                <p class="status" id="jokerStatus">🃏 ?</p>
+            </div>
+        </div>
+
+        <!-- Actions du croupier -->
+        <div class="dealer-actions">
+            <h2>Actions</h2>
+            <button id="startGameBtn" class="action-btn start-btn">
+                🎮 Démarrer nouvelle partie
+            </button>
+            <button id="nextRoundBtn" class="action-btn" disabled>
+                ➡️ Manche suivante
+            </button>
+            <button id="endGameBtn" class="action-btn danger-btn" disabled>
+                🛑 Terminer la partie
+            </button>
+            <button id="resetDataBtn" class="action-btn danger-btn">
+                ⚠️ Réinitialiser toutes les données
+            </button>
+        </div>
+
+        <!-- Liste des joueurs -->
+        <div class="players-section">
+            <h2>Joueurs actifs</h2>
+            <div id="playersList" class="players-list">
+                <p class="no-players">Aucun joueur enregistré</p>
+            </div>
+        </div>
+
+        <!-- Logs d'activité -->
+        <div class="logs-section">
+            <h2>Journal d'activité</h2>
+            <div id="activityLogs" class="logs-container">
+                <p class="log-entry">🟢 Interface croupier chargée</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/usageTracker.js"></script>
+    <script src="js/dealer.js"></script>
+</body>
+</html>
